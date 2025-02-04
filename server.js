@@ -6,15 +6,19 @@ const PORT = process.env.PORT || 3000;
 //define and create an instance of the server
 const server = express();
 
+//setting up handlebars
 server.engine('handlebars', engine())
 server.set('view engine', 'handlebars')
-
-//define views directory
 server.set('views','./views')
 
+//Parse form data
+server.use(express.json())
+server.use(express.urlencoded({ extended: true }))
 
-
-
+//Routes
+server.get('/', (req, res, next) => {
+    res.render('login')
+})
 
 
 
