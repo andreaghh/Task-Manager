@@ -1,4 +1,5 @@
 import express from 'express'
+import path from 'path'
 import {engine} from 'express-handlebars'
 import {findOrCreate} from "./models/user.js";
 
@@ -13,7 +14,14 @@ server.set('view engine', 'handlebars')
 server.set('views','./views')
 
 //setup static files
-server.use(express.static(import.meta.dirname+ '/public'))
+server.use(express.static(import.meta.dirname+ 'public'))
+
+// Get current directory path
+/*const __dirname = path.dirname(new URL(import.meta.url).pathname);
+console.log('Public route:', path.join(__dirname, 'public'));
+
+// Serve static files from folder 'public'
+server.use(express.static(path.join(__dirname, 'public')));*/
 
 //Parse form data
 server.use(express.json())
@@ -44,4 +52,4 @@ server.use((err,req,res)=>{
 })
 
 //Start the server
-server.listen(PORT, () => console.log(`server  running and listening to port ${PORT}`))
+server.listen(PORT,()=> console.log(`server  running and listening to port ${PORT}`))
