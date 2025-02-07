@@ -1,0 +1,22 @@
+table {
+    width: 90%; /* Reduce table width */
+    margin: 20px auto; /* Center the table */
+    border-collapse: collapse;
+    background: white;
+    font-size: 14px; /* Smaller font size */
+}
+
+/* Table Headers */
+th {
+    background-color: pink;
+    color: black;
+    padding: 8px; /* Reduce padding */
+    text-align: left;
+    font-size: 14px; /* Match smaller font size */
+}
+
+/* Table Rows */
+td {
+    padding: 8px; /* Reduce padding */
+    border-bottom: 1px solid #ddd;
+}

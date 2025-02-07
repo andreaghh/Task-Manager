@@ -1,0 +1,31 @@
+<table>
+    <thead>
+        <tr>
+            <th>Tittle</th>
+            <th>Description</th>
+            <th>Due date</th>
+            <th>completiton</th>
+            <th>status</th>
+            <th>Priority</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tasks}}
+        <tr>
+            <td>{{this.title}}</td>
+            <td>{{this.description}}</td>
+            <td>{{this.due_date}}</td>
+            <td>{{this.completion_date}}</td>
+            <td>{{this.status}}</td>
+            <td>{{this.priority}}</td>
+            <td>
+                <a href="/tasks/edit/{{this.id}}">Edit</a>
+                <button class="complete-task" data-task-id="{{this.id}}">Complete</button>
+                <button class="cancel-task" data-task-id="{{this.id}}">Cancel</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+</table>

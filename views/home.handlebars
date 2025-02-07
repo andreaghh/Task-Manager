@@ -1,0 +1,23 @@
+{{> header}}
+<h1> Welcome, {{user.name}} </h1>
+<a href="/tasks/add" class="btn-add-task">+ Add New Task</a>
+<form method="GET" action="/">
+    <label for="search"> search tasks: </label>
+    <input type="text" id="search" name="search" placeholder="Filter tasks" />
+
+    <label for="status">Filter by status:</label>
+    <select id="status" name="status">
+        <option value="">All</option>
+        <option value="Pending"> Pending</option>
+        <option value="Completed"> Completed</option>
+        <option value="Cancelled"> Cancelled</option>
+    </select>
+
+    <label for="due_date">Filter by due date: </label>
+    <input type="date" id="due_date" name="due_date" >
+
+    <input type="submit" value="Filter">
+
+</form>
+
+{{> taskTable}}

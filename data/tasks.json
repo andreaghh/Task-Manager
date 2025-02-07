@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "title": "Buy groceries",
+    "description": "Buy milk, bread, and eggs from the supermarket.",
+    "due_date": "2025-02-07",
+    "completion_date": null,
+    "status": "Pending",
+    "priority": "High",
+    "user": "andrea1999"
+  }
+]
