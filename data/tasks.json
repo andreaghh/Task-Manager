@@ -1,12 +1,42 @@
 [
   {
     "id": "1",
-    "title": "Buy groceries",
-    "description": "Buy milk, bread, and eggs from the supermarket.",
-    "due_date": "2025-02-07",
-    "completion_date": null,
-    "status": "Pending",
+    "title": "Web development ",
+    "description": "Finisih hw, read the chapter 6",
+    "due_date": "2025-02-10",
     "priority": "High",
+    "status": "Completed",
+    "completion_date": "2025-02-09",
     "user": "andrea1999"
+  },
+  {
+    "id": "2",
+    "title": "Virtual assistant EDIT",
+    "description": "send emails to Kat",
+    "due_date": "2025-02-11",
+    "priority": "Medium",
+    "status": "Pending",
+    "completion_date": "",
+    "user": "andrea1999"
+  },
+  {
+    "id": "3",
+    "title": "DSl",
+    "description": "read chapter",
+    "due_date": "2025-02-07",
+    "priority": "Medium",
+    "status": "Completed",
+    "completion_date": "2025-02-09",
+    "user": "andrea1999"
+  },
+  {
+    "id": "4",
+    "title": "English ",
+    "description": "chapter 2 y 3 hw",
+    "due_date": "2025-02-11",
+    "priority": "High",
+    "status": "Pending",
+    "completion_date": null,
+    "user": "maria1999"
   }
 ]

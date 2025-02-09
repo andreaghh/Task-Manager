@@ -1,23 +1,25 @@
 {{> header}}
-<h1> Welcome, {{user.name}} </h1>
-<a href="/tasks/add" class="btn-add-task">+ Add New Task</a>
-<form method="GET" action="/">
-    <label for="search"> search tasks: </label>
-    <input type="text" id="search" name="search" placeholder="Filter tasks" />
+
+<h1 id="home-title">Welcome, {{user.name}}</h1>
+
+<a id="add-task-link" href="/tasks/add">Add New Task</a>
+
+<form id="task-filter-form" method="GET" action="/home">
+    <label for="search"> Search tasks: </label>
+    <input type="text" id="search" name="search" placeholder="Filter tasks" value="{{search}}" />
 
     <label for="status">Filter by status:</label>
     <select id="status" name="status">
         <option value="">All</option>
-        <option value="Pending"> Pending</option>
-        <option value="Completed"> Completed</option>
-        <option value="Cancelled"> Cancelled</option>
+        {{#each statuses}}
+            <option value="{{this}}" {{#if (eq this ../status)}}selected{{/if}}>{{this}}</option>
+        {{/each}}
     </select>
 
     <label for="due_date">Filter by due date: </label>
-    <input type="date" id="due_date" name="due_date" >
+    <input type="date" id="due_date" name="due_date" value="{{due_date}}" >
 
     <input type="submit" value="Filter">
-
 </form>
 
 {{> taskTable}}

@@ -1,22 +1,194 @@
+/*LOGIN PAGE */
+#login-title {
+    color: hotpink;
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+#login-logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+#login-description {
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+#login-form {
+    background-color: white;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+#login-name,
+#login-username {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+#login-button {
+    background-color: pink;
+    color: black;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    margin-top: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+}
+#login-button:hover {
+    background-color: #ffb6c1;
+}
+
+/*HOME PAGE*/
+#home-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: hotpink;
+    margin-top: 20px;
+}
+#add-task-link {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #8a2be2;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/*SEARCH BAR */
+#task-filter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+#search, #status, #due_date {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/*TASKS TABLE*/
+
 table {
-    width: 90%; /* Reduce table width */
+    width: 90%;
     margin: 20px auto; /* Center the table */
     border-collapse: collapse;
     background: white;
-    font-size: 14px; /* Smaller font size */
+    font-size: 14px;
 }
 
-/* Table Headers */
 th {
     background-color: pink;
     color: black;
-    padding: 8px; /* Reduce padding */
+    padding: 8px;
     text-align: left;
-    font-size: 14px; /* Match smaller font size */
+    font-size: 14px;
 }
 
-/* Table Rows */
 td {
-    padding: 8px; /* Reduce padding */
+    padding: 8px;
     border-bottom: 1px solid #ddd;
+}
+button, .btn-add-task, .complete-task, .cancel-task {
+    background-color: white;
+    color: black;
+    padding: 8px 12px;
+    border: #5d1db8 solid 1px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+button:hover, .btn-add-task:hover, .complete-task:hover, .cancel-task:hover {
+    background-color: #c49cff;
+}
+
+input[type="submit"] {
+    background-color: #d8b6ff;
+    color: black;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+input[type="submit"]:hover {
+    background-color: #c49cff;
+}
+
+a {
+    color: #8a2be2;
+    font-weight: bold;
+}
+a:hover {
+    color: #5d1db8;
+}
+/* ADD AND UPDATE FORM*/
+#task-form-container {
+    width: 400px;
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+#task-form-container h2 {
+    text-align: center;
+    color: hotpink
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#task-form-container label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#task-form-container input,
+#task-form-container select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#task-form-container button {
+    background-color: #d8b6ff;
+    color: black;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    margin-top: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#task-form-container button:hover {
+    background-color: #c49cff;
 }

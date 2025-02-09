@@ -1,15 +1,17 @@
-<h1> Welcome to the task-manager </h1>
-<img src="/public/images/login.png" alt="Task Manager Logo" style="width: auto; height: auto;">
+{{> header}}
 
-<h3> Please log in with your username and name. If you don't have one, it will be created automatically </h3>
+<h1 id="login-title">Welcome to your Task Manager</h1>
 
-<form action="./login" method="POST">
-    <label for ="name"> Enter your name:</label>
-    <input type ="text" id="name" name = "name" required>
+<img id="login-logo" src="/public/images/login.png" alt="Task Manager Logo">
 
-    <label for="username"> Enter your username:</label>
-    <input type ="text" id="username" name = "username" required>
+<h3 id="login-description">Please log in with your username and name. <br> If you don't have one, it will be created automatically.</h3>
 
-    <button type ="submit">Login</button>
+<form id="login-form" action="./login" method="POST">
+    <label for="name">Enter your name:</label>
+    <input type="text" id="login-name" name="name" required>
 
+    <label for="username">Enter your username:</label>
+    <input type="text" id="login-username" name="username" required>
+
+    <button id="login-button" type="submit">Login</button>
 </form>

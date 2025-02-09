@@ -1,0 +1,4 @@
+{
+  "priorities": ["High", "Medium", "Low"],
+  "statuses": ["Pending", "Completed", "Cancelled"]
+}

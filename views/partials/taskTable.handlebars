@@ -1,31 +1,52 @@
 <table>
     <thead>
-        <tr>
-            <th>Tittle</th>
-            <th>Description</th>
-            <th>Due date</th>
-            <th>completiton</th>
-            <th>status</th>
-            <th>Priority</th>
-            <th>Actions</th>
-        </tr>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Due Date</th>
+        <th>Status</th>
+        <th>Priority</th>
+        <th>Completion Date</th>
+        <th>Actions</th>
+    </tr>
     </thead>
     <tbody>
-        {{#each tasks}}
+    {{#each tasks}}
         <tr>
             <td>{{this.title}}</td>
             <td>{{this.description}}</td>
             <td>{{this.due_date}}</td>
-            <td>{{this.completion_date}}</td>
             <td>{{this.status}}</td>
             <td>{{this.priority}}</td>
             <td>
+                {{#if (eq this.status "Completed")}}
+                    {{this.completion_date}}
+                {{else}}
+                    N/A
+                {{/if}}
+            </td>
+            <td>
                 <a href="/tasks/edit/{{this.id}}">Edit</a>
-                <button class="complete-task" data-task-id="{{this.id}}">Complete</button>
-                <button class="cancel-task" data-task-id="{{this.id}}">Cancel</button>
+
+                <!-- Complete Button -->
+                {{#if (eq this.status "Completed")}}
+                    <button disabled>Complete</button>
+                {{else}}
+                    <form class="complete-task-form" action="/tasks/complete/{{this.id}}?_method=PUT" method="POST" style="display:inline;">
+                        <button type="submit" class="complete-task">Complete</button>
+                    </form>
+                {{/if}}
+
+                <!-- Cancel Button -->
+                {{#if (eq this.status "Cancelled")}}
+                    <button disabled>Cancel</button>
+                {{else}}
+                    <form class="cancel-task-form" action="/tasks/cancel/{{this.id}}?_method=PUT" method="POST" style="display:inline;">
+                        <button type="submit" class="cancel-task">Cancel</button>
+                    </form>
+                {{/if}}
             </td>
         </tr>
-        {{/each}}
+    {{/each}}
     </tbody>
-
 </table>
