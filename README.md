@@ -33,6 +33,7 @@ How to use:
 1. Login:
     - Enter a name and username on the login page. 
     - If the username does not exist, an account is automatically created.
+    - test user= name: "Andrea" username: "andrea1999"
 
 2. Add a task:
     - Click "Add New Task".
